@@ -1,0 +1,43 @@
+<MyLayout>
+
+	BoxLayout:
+		
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+		
+		Accordion:
+
+			orientation: 'vertical'
+
+			AccordionItem:
+
+				title: 'Panneau 1'
+
+				Image:
+
+					source: 'pic/pic1.png'
+
+			AccordionItem:
+
+				title: 'Panneau 2'
+
+				Label:
+
+					text: 'Texte du panneau 2'
+					font_size: 32
+
+			AccordionItem:
+
+				title: 'Panneau 3'
+
+				Image:
+
+					source: 'pic/pic2.png'
+
+			AccordionItem:
+
+				title: 'Panneau 4'
+
+				Image:
+
+					source: 'pic/pic3.png'

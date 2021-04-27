@@ -1,0 +1,19 @@
+<MyLayout>
+
+	id: my_widget  # identifiant utilisée dans la partie ci-dessous 'FilehooserIconView'
+
+	BoxLayout:
+		
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+		padding: 50  # espacement entre la fenêtre et les widgets
+		spacing: 20  # espacement entre les widgets
+
+		Image:  # permet d'afficher un cadre à la fenêtre principale pour charger une image
+			id: my_image  # identifiant utilisé dans la fonction argumentée selected()
+			source: ""  # mettre les guillemets en double crochet pour que ça fonctionne
+		
+		FileChooserIconView: # vue des fichiers en icônes
+
+			id: filechooser
+			on_selection: my_widget.selected(filechooser.selection)  # déclaration d'une fonction 'selected(argumentée)'

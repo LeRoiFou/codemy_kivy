@@ -1,0 +1,37 @@
+<MyLayout>
+
+	BoxLayout:
+		
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+		
+		Carousel:
+
+			#direction: 'right'
+			#direction: 'left'
+			#direction: 'top'
+			direction: 'bottom'
+
+			Image:
+
+				source: 'pic/pic1.png'
+
+			AsyncImage:  # chargement d'une image à partir d'un lien internet
+
+				source: 'https://kivycoder.com/wp-content/uploads/2020/12/accordions-for-kivy-python-kivy.jpg'
+
+			Image:
+
+				source: 'pic/pic2.png'
+
+			Image:
+
+				source: 'pic/pic3.png'
+
+			Image:
+
+				source: 'pic/pic4.png'
+
+			Image:
+
+				source: 'pic/pic5.png'

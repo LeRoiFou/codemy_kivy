@@ -1,0 +1,27 @@
+<MyLayout>
+# Configuration de la fenêtre principale
+	
+	BoxLayout:
+		
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+		orientation: 'vertical'  # orientation des widgets
+		padding: 10  # espacement entre la fenêtre et les widgets
+		spacing: 5  # espacement entre la fenêtre et les widgets
+
+		Label:
+			
+			markup: True  # permet de mettre en forme le texte ci-après
+			font_size: 32
+			text:	"C'est un texte en [color=#c92c56][b]gras[/b][/color], [sup]haut[/sup] et [sub]bas[/sub]"
+
+		Label:
+
+			markup: True  # permet de mettre en forme le texte ci-après
+			font_size: 32
+			text:	"C'est un [font=Mistral]texte[/font] en [size=150][i]italique[/i][/size]"
+
+		Button:
+
+			markup: True  # permet de mettre en forme le texte ci-après
+			font_size: 32
+			text: "[u]Clique[/u] [s]SUR LE BOUTON ![/s]"

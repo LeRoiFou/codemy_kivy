@@ -1,0 +1,16 @@
+<MyLayout>
+
+	BoxLayout:
+		size:root.width, root.height
+		orientation: 'vertical'
+		padding: 10  # espacement entre la fenêtre principale et les widgets
+		spacing: 5  # espacement entre widgets
+	
+		# Récupération dans le répertoire KyMd : C:\Users\LRCOM\PycharmProjects\codemy_kivy\kivymd\KivyMD\kivymd\uix\card.py
+		# à partir de la ligne 35 précédée du titre : KV = '''
+		Screen:
+
+			MDCard:
+				size_hint: None, None
+				size: "280dp", "180dp"
+				pos_hint: {"center_x": .5, "center_y": .5}

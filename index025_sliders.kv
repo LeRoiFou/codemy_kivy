@@ -1,0 +1,22 @@
+<MyLayout>
+
+	slide_text: slider_label  # assignation de l'identifiant slider_label
+
+	BoxLayout:
+		
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+		
+		Label:
+
+			id: slider_label
+			text: 'Utilise le curseur !'
+			font_size: 32
+
+		Slider:
+
+			min: 1
+			max: 50
+			step: 1
+			orientation: 'horizontal'
+			on_value: root.slide_it(*args)

@@ -1,0 +1,19 @@
+<MyLayout>
+
+	BoxLayout:
+		size:root.width, root.height
+		orientation: 'vertical'
+		padding: 10  # espacement entre la fenêtre principale et les widgets
+		spacing: 5  # espacement entre widgets
+		
+		Label:
+			id: my_label
+			font_size: 32
+			text: "L'interrupteur est sur On !"
+
+		Switch:
+			id: my_switch
+			active: True  # True lorsque l'interrupteur est sur On
+			disabled: False  # True : désactive l'interrupteur
+			font_size: 32
+			on_active: root.switch_click(self, self.active)

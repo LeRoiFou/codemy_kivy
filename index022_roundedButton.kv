@@ -1,0 +1,37 @@
+<MyLayout>
+
+# Changement de la couleur de fond de la fenêtre principale
+	background_color: (1, 1, 1, 1)
+	canvas.before: 
+		Color:
+			rgba: self.background_color  # reprend l'instruction au-dessus de 'canvas.before'
+		Rectangle:
+			size: self.size
+			pos: self.pos
+
+	BoxLayout:
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+		padding: 50  # espacement entre la fenêtre et les widgets
+		spacing: 20  # espacement entre les widgets
+		
+		Button:
+			text: 'Salut !'
+
+		RoundedButton:
+			text: 'Au revoir !'
+			pos_hint: {'Center x': 0.5}  # position du widget (x, y, haut, bas)
+			size_hint: (1, .3)  # largeur et hauteur du widget
+			on_press: print('Hello !')  # cela s'affiche dans la console même si on a l'impression que le bouton n'a pas fonctionné...
+			
+
+<RoundedButton@Button>
+	background_color: (0, 0, 0, 0)
+	background_normal: ''
+	canvas.before:
+		Color:
+			rgba: (48/255, 84/255, 150/255, 1)  # couleur du widget
+		RoundedRectangle:
+			size: self.size
+			pos: self.pos
+			radius: [58]  # degré de contour de l'arrondi du widget

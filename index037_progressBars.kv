@@ -1,0 +1,23 @@
+<MyLayout>
+
+	BoxLayout:
+		size:root.width, root.height
+		orientation: 'vertical'
+		padding: 10  # espacement entre la fenêtre principale et les widgets
+		spacing: 5  # espacement entre widgets
+		
+		Label:
+			id: my_label
+			text: 'Progression de 0 %'
+
+		ProgressBar:
+			id : my_progress_bar
+			min: 0  # valeur de début de la barre
+			max: 1  # valeur de fin de la barre
+			value: 0  # valeur par défaut de la barre de progression
+			pos_hint: {'x': .1}  # position de la barre <-> la fenêtre principale
+			size_hint_x: .8  # largeur de la barre <-> la fenêtre principale
+
+		Button:
+			text: "Clique-moi !"
+			on_press: root.press_it()  # appel de la fonction lorsqu'on appuie sur le bouton

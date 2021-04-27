@@ -1,0 +1,59 @@
+<Button>
+# Configuration de tous les boutons de la fenêtre
+
+	font_size: 32
+
+	background_normal: ''
+
+	background_color: (0, 0, 1, 1)
+
+
+<TextInput>
+# Configuration de tous les champs de saisie
+
+	background_color: (150/255, 150/255, 150/255, 1)
+
+
+<MyLayout>
+# Configuration de la fenêtre
+	
+	BoxLayout:
+
+		orientation: 'vertical'
+
+		size: root.width, root.height
+
+		padding: 10
+
+		spacing: 10
+
+		Label:
+
+			text: 'Nom'		
+
+			#Configuration de la police d'écriture
+			font_size: 45  # taille de la police d'écriture
+			color: (0,1,0,1)  # changement de la couleur de la police d'écriture
+			bold: True  # texte en gras
+			italic: True  # texte en italique
+			outline_color: (0, 0, 1)  # couleur du contour de l'écriture
+			outline_width: 10  # épaisseur du contour de l'écriture
+
+			# les instructions ci-après permettent de changer la couleur de l'étiquette
+			background_color: (182/255, 66/255, 245/255, 1) 
+			canvas.before: 
+				Color:
+					rgba: self.background_color
+				Rectangle:
+					size: self.size
+					pos: self.pos				
+			
+		TextInput:
+
+			multiline: False
+
+		Button:
+
+			text: 'Effacer'
+
+			background_color: (1,0,0,1)  # personnalisation de la couleur pour ce bouton qui est différente des autres boutons

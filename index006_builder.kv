@@ -1,0 +1,44 @@
+<MyGridLayout>
+	
+
+	#Assignation des variables pour que la fonction attribuée au bouton d'exécution puisse s'appliquer
+	name:name
+	pizza:pizza
+	color:color
+
+	GridLayout: # Grille principale
+		
+		cols:1  # nombre de colonne de la grille principale (bouton d'exécution)
+
+		size: root.width, root.height  # affichage des widgets sur la totalité de la fenêtre
+
+		GridLayout:  # Grille secondaire
+			
+			cols:2  # nombre de colonne de la grille secondaire
+
+			Label:  # 1ère ligne / 1ère colonne
+				text:'Nom'
+
+			TextInput:  # 1ère ligne / 2ème colonne
+				id:name  # pour l'exécution du bouton
+				multiligne:False
+
+			Label:  # 2ème ligne / 1ère colonne
+				text:'Pizza favorite'
+
+			TextInput:  # 2ème ligne / 2ème colonne
+				id:pizza  # pour l'exécution du bouton
+				multiligne:False
+
+			Label:  # 3ème ligne / 1ère colonne
+				text:'Couleur favorite'
+
+			TextInput:  # 3ème ligne / 2ème colonne
+				id:color  # pour l'exécution du bouton
+				multiligne:False
+
+		Button:
+			text:'Soumettre'
+			font_size: 32  # taille de la police d'écriture
+			on_press: root.press()  # exécution de la fonction press()
+			

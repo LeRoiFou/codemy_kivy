@@ -1,0 +1,21 @@
+<MyLayout>
+# Configuration de la fenêtre principale
+	
+	# Changement de la couleur de fond de la fenêtre principale
+	background_color: (1, 1, 1, 1)
+	canvas.before: 
+		Color:
+			rgba: self.background_color  # reprend l'instruction au-dessus de 'canvas.before'
+		Rectangle:
+			size: self.size
+			pos: self.pos
+		
+	BoxLayout:
+
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+
+		Image:
+			source: 'pic/pic3.png'
+			allow_stretch: True  # étalement de l'image sur la fenêtre
+			keep_ratio: True  # conservation des dimensions de l'image

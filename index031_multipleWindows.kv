@@ -1,0 +1,50 @@
+WindowManager:
+	
+	FirstWindow:
+	SecondWindow:
+
+
+<FirstWindow>:  # Premier écran
+	
+	name: 'Premier'
+
+	BoxLayout:
+
+		orientation: 'vertical'
+		size: root.width, root.height
+
+		Label:
+
+			text: 'Premier écran'
+			font_size: 32
+
+		Button:
+
+			text: 'Prochain écran'
+			font_size: 32
+			on_release: 
+				app.root.current = 'Deuxième'  # app = class AwesomeApp(App) -> va au deuxième écran
+				root.manager.transition.direction = 'left' # va au premier écran en avançant. Directions possibles : left/right/up/down
+
+
+<SecondWindow>:  # Deuxième écran
+	
+	name: 'Deuxième'
+
+	BoxLayout:
+
+		orientation: 'vertical'
+		size: root.width, root.height
+
+		Label:
+
+			text: 'Deuxième écran'
+			font_size: 32
+
+		Button:
+
+			text: 'Écran précédent'
+			font_size: 32
+			on_release: 
+				app.root.current = 'Premier'  # app = class AwesomeApp(App) -> va au premier écran
+				root.manager.transition.direction = 'right' # va au premier écran en retournant à l'arrière. Directions possibles : left/right/up/down

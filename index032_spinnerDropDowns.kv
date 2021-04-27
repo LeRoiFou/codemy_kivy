@@ -1,0 +1,23 @@
+<MyLayout>
+
+	BoxLayout:
+		
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+
+		Label:
+
+			id: click_label
+			text: 'Choisisser votre pizza favorite'
+			font_size: 32
+
+		Spinner:
+
+			id: spinner_id
+			text: 'Pizza favorite'
+			values: ['Poivrons', 'Champignons', '4 fromages']
+			on_text: root.spinner_clicked(spinner_id.text)  # fonction appliquée dans la classe MyLayout
+
+		Label:
+
+			text: ""  # permet d'afficher la liste des pizzas en-dessous

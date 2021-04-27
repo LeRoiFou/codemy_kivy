@@ -1,0 +1,27 @@
+<MyLayout>
+# Configuration de la fenêtre principale
+	
+	BoxLayout:
+
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+
+		# Configuration de l'étiquette
+		Label:
+			id: name_label  # permet de lier l'étiquette avec d'autres widgets
+			text: 'Quel est ton prénom ?'
+			font_size: 32  # taille de la police d'écriture
+
+		# Configuration du champ de saisie
+		TextInput:
+			id: name_input  # permet de lier le champ de saisie avec d'autres widgets
+			multiline: False  # une seule ligne de saisie
+			size_hint: (1, .5)  # largeur et hauteur
+
+		# Configuration du bouton d'exécution
+		Button:
+			size_hint: (1, .5)  # largeur et hauteur
+			font_size: 32  # taille de la police d'écriture
+			text: 'Valider'
+			on_press: root.press()  # en appuyant sur le bouton cela va se répercuter sur les autres widgets
+	

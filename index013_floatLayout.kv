@@ -1,0 +1,41 @@
+<Button>
+# Configuration du bouton
+
+	font_size: 32  # taille de la police d'écriture
+	size_hint: (0.3, 0.3)  # largeur et hauteur du bouton
+
+<MyLayout>
+# Configuration de la fenêtre principale
+	
+	# Changement de la couleur de fond de la fenêtre principale
+	background_color: (1, 1, 1, 1)
+	canvas.before: 
+		Color:
+			rgba: self.background_color  # reprend l'instruction au-dessus de 'canvas.before'
+		Rectangle:
+			size: self.size
+			pos: self.pos
+		
+	FloatLayout:  # pour la mise à disposition des widgets dans la fenêtre principale (en haut à droite, en bas à gauche...)
+
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+
+		Button:
+			text: 'Haut gauche'
+			pos_hint: {'x':0, 'top':1}  # position du widget {x, y, haut, bas}
+
+		Button:
+			text: 'Haut droite'
+			pos_hint: {'x':.7, 'top':1}  # position du widget {x, y, haut, bas} -> x:.7 car la largeur du bouton est déjà de 0.3
+
+		Button:
+			text: 'Centre'
+			pos_hint: {'x':.35, 'y':.35}  # position du widget {x, y, haut, bas}
+
+		Button:
+			text: 'Bas gauche'
+			pos_hint: {'x':0}  # position du widget {x, y, haut, bas}
+
+		Button:
+			text: 'Bas droite'
+			pos_hint: {'x':.7, 'bottom':1}  # position du widget {x, y, haut, bas} -> x:.7 car la largeur du bouton est déjà de 0.3

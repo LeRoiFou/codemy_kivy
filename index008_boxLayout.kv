@@ -1,0 +1,36 @@
+<MyLayout>
+	
+	BoxLayout:  # instruction à mettre en place pour pouvoir effectuer les instructions ci-dessous
+
+		size: root.width, root.height  # étirement des widgets sur toute la fenêtre
+
+		orientation: 'vertical'  # type d'orientation pour les widgets : horizontal ou vertical
+
+		padding: 50  # espacement à l'extérieur des widgets
+
+		spacing: 20  # espacement entre les widgets  
+
+		Button:
+
+			text: 'Hello World !'
+
+		Button:
+
+			text: 'Goodbye World !'
+
+		Button:
+
+			text: "I'm hungry !"
+
+			pos_hint: {'center_x': 0.5}  # position du widget : ici le bouton est à 0.5 sur un total de 1, il est donc centré sur la ligne où il est positionné
+
+			# 1ère possibilité de la taille du widget :
+			# size_hint: (0.5, 0.3) # largeur et hauteur du bouton
+			# Avec cette instruction, les dimensions du widget varient avec les dimensions de la fenêtre
+
+			# 2ème possibilité de la taille du widget :
+			size_hint: (None, None)
+			width: 200
+			height: 50
+			# Avec cette instruction, les dimensions du widget ne varient pas quelque soit les dimensions de la fenêtre
+

@@ -1,0 +1,47 @@
+<MyLayout>
+
+	BoxLayout:
+		
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+
+		Splitter: # séparateur qui permet d'agrandir / de diminuer les deux widgets se trouvant entre ce séparateur
+
+			sizable_from: 'bottom' # le séparateur se trouve en-dessous du bouton
+
+			Button:
+
+				text: 'Salut 1 !'
+				font_size: 32
+
+		Label:
+
+			text: "C'est du texte !"
+			font_size: 32
+
+		Splitter: # séparateur qui permet d'agrandir / de diminuer les deux widgets se trouvant entre ce séparateur
+
+			sizable_from: 'top' # le séparateur se trouve au-dessus du bouton
+			
+			Button:
+
+				text: 'Salut 2 !'
+				font_size: 32
+
+		GridLayout:
+
+			cols: 2
+
+			Button:
+
+				text: 'Gauche'
+				font_size: 32
+
+			Splitter: # séparateur qui permet d'agrandir / de diminuer les deux widgets se trouvant entre ce séparateur
+
+				sizable_from: 'left' # le séparateur se trouve à gauche du bouton ci-dessous
+
+				Button:
+
+					text: 'Droite'
+					font_size: 32

@@ -1,0 +1,46 @@
+<MyLayout>
+
+	do_default_tab: False  # évite d'avoir une onglet qui s'affiche par défaut
+	size_hint: .9, .9  # taille des fenêtres à onglets
+	pos_hint: {'center_x': .5, 'center_y': .5}  # centrage des fenêtres à onglets de la fenêtre principale
+	#tab_pos: 'top_mid'  # les titres des onglets se trouvent en haut au milieu des fenêtres à onglets
+	#tab_pos: 'top_right'  # les titres des onglets se trouvent en haut à droite des fenêtres à onglets
+	#tab_pos: 'bottom_right'  # les titres des onglets se trouvent en bas à droite des fenêtres à onglets
+	#tab_pos: 'bottom_left'  # les titres des onglets se trouvent en bas à gauche des fenêtres à onglets
+	tab_pos: 'right_top'  # les titres des onglets se trouvent à droite à haut des fenêtres à onglets
+	# les différentes positions des onglets : 
+	# left_top, left_mid, left_bottom, 
+	# top_left, top_mid, top_right, 
+	# right_top, right_mid, right_bottom,
+	# bottom_left, bottom_mid, bottom_right
+	
+
+	TabbedPanelItem:  # onglet 1
+		
+		text: 'Onglet 1'
+
+		Label:
+
+			text: 'Salut !'
+
+	TabbedPanelItem:  # onglet 2
+
+		text: 'Onglet 2'
+
+		BoxLayout:
+
+			Label:
+
+				text: 'Appuye sur le bouton =>'
+
+			Button:
+
+				text : 'Clique-moi !'
+
+	TabbedPanelItem:  # onglet 3
+
+		text: 'Onglet 3'
+
+		Image:
+
+			source: 'pic/pic3.png'

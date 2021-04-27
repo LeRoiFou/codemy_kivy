@@ -1,0 +1,43 @@
+#:import Factory kivy.factory.Factory
+
+<MyPopup@Popup>
+
+	auto_dismiss: False  # False : si on active à l'extérieur de la fenêtre, rien ne s'active
+	title: "C'est une fenêtre à popup"
+	size_hint: (0.6, 0.2)
+	pos_hint: {'x':0.2, 'top':0.9}
+
+	BoxLayout:  # permet d'avoir + d'un widget dans cette fenêtre sinon il est exigé d'avoir qu'un seul widget...
+
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+
+		Label:
+
+			text: 'Quelque chose dans le popup'
+			font_size: 24
+
+		Button:
+
+			text: 'Ferme-moi !'
+			font_size: 24
+			on_release: root.dismiss()  # ferme la fenêtre
+
+<MyLayout>
+
+	BoxLayout:
+		
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+		
+		Label:
+
+			text: 'Popup !!!'
+			font_size: 32
+
+		Button:
+
+			text: 'Popup !'
+			font_size: 32
+			on_release: Factory.MyPopup().open()  # Factory car le bloc d'instruction MyPopup est en dehors de ce bloc d'instruction
+

@@ -1,0 +1,31 @@
+<MyLayout>
+
+	BoxLayout:
+		
+		orientation: 'vertical'  # orientation des widgets
+		size: root.width, root.height  # étalement des widgets sur toute la fenêtre principale
+		padding: 50
+		spacing: 20
+
+		Label:
+
+			id: my_label
+			text: 'Hello World !'
+			font_size: 32
+
+		Button:
+
+			text: 'Salut !'
+			font_size: 32
+			size_hint: (.15, .12)
+			pos_hint: {'center_x': 0.5}
+			background_color: (0, 0, 0, 0)
+			on_press: root.hello_on()  # fonction pour afficher qu'on a appuyé sur le bouton + image du 'bouton appuyé''
+			on_release: root.hello_off()  # fonction pour changer l'image du bouton tel qu'il était lorsqu'on appuye pas dessus et texte d'origine
+
+
+			Image:
+				id: my_image
+				source:'images/login.png'
+				center_x: self.parent.center_x  # centrage de l'image sur le bouton
+				center_y: self.parent.center_y  # centrage de l'image sur le bouton

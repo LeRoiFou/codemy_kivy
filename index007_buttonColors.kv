@@ -1,0 +1,59 @@
+# L'instruction ci-après est utilisée pour changer la couleur des boutons en recourant aux codes hexadécimaux. Cette instruction n'est pas nécessaire si on a recourt aux codes couleurs R, G, B
+
+#:import utils kivy.utils
+
+<MyGridLayout>
+	
+
+	#Assignation des variables pour que la fonction attribuée au bouton d'exécution puisse s'appliquer
+	name:name
+	pizza:pizza
+	color:color
+
+	GridLayout: # Grille principale
+		
+		cols:1  # nombre de colonne de la grille principale (bouton d'exécution)
+
+		size: root.width, root.height  # affichage des widgets sur la totalité de la fenêtre
+
+		GridLayout:  # Grille secondaire
+			
+			cols:2  # nombre de colonne de la grille secondaire
+
+			Label:  # 1ère ligne / 1ère colonne
+				text:'Nom'
+
+			TextInput:  # 1ère ligne / 2ème colonne
+				id:name  # pour l'exécution du bouton
+				multiligne:False
+
+			Label:  # 2ème ligne / 1ère colonne
+				text:'Pizza favorite'
+
+			TextInput:  # 2ème ligne / 2ème colonne
+				id:pizza  # pour l'exécution du bouton
+				multiligne:False
+				
+				# Solution choisie ici pour changer la couleur du bouton : recours au code couleur hexadécimal
+				background_color: utils.get_color_from_hex('ea6981')
+
+			Label:  # 3ème ligne / 1ère colonne
+				text:'Couleur favorite'
+
+			TextInput:  # 3ème ligne / 2ème colonne
+				id:color  # pour l'exécution du bouton
+				multiligne:False
+
+		Button:
+			text:'Soumettre'
+			font_size: 32  # taille de la police d'écriture
+			background_normal: ''  # supprime la couleur sombre du widget
+
+			# 1ère solution pour changer la couleur du bouton : recours aux codes R, G, B :
+			#background_color: (133/255.0, 53/255.0, 224/255.0, 1)  # R, G, B, degré d'opacité : données toujours comprises entre 0 et 1 (donc diviser par 255)
+
+			# 2ème solution pour changer la couleur du bouton : recours au code couleur hexadécimal
+			background_color: utils.get_color_from_hex('265e1a')
+
+			on_press: root.press()  # exécution de la fonction press()
+			
