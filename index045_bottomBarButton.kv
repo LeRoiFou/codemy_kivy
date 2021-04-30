@@ -1,0 +1,23 @@
+MDBoxLayout:
+
+	orientation: 'vertical'
+
+	MDToolbar: # barre d'outils
+		title: "Notre barre d'outils située en haut"
+		left_action_items: [["menu"]]
+		right_action_items: [["dots-vertical"]]
+
+	MDLabel: # étiquette
+		id: my_label
+		text: "Quelque chose"
+		halign: "center"
+
+	MDBottomAppBar: # widgets en bas de la fenêtre
+		
+		MDToolbar: # barre d'outils
+			icon: 'newspaper-variant-multiple-outline'  # voir le lien en favori pour les icônes
+			title : "Menu bouton ohohoh !"
+			left_action_items: [["menu", lambda x: app.presser()]]
+			type: "bottom"
+	        mode: "end"
+	        on_action_button: app.presser()  # exécution du bouton
