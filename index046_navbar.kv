@@ -1,0 +1,46 @@
+BoxLayout:
+	orientation : "vertical"
+
+	MDToolbar:
+		title: "Barre de navigation située en haut de l'écran"
+        md_bg_color: .2, .2, .2, 1
+        specific_text_color: 0.12, 0.45, 0.65, 1
+
+	MDBottomNavigation:
+        panel_color: 0.12, 0.45, 0.65, 1
+
+        MDBottomNavigationItem: # barre de navigation en bas de l'écran
+            name: "screen 1"
+            text: "Python"
+            icon: "language-python"
+
+            MDLabel:
+                text: "Texte au centre de l'écran 1 - Python\n\nJe gère ;)"
+                halign: "center"
+
+        MDBottomNavigationItem: # barre de navigation en bas de l'écran
+            name: "screen 2"
+            text: "Youtube"
+            icon: "youtube"
+
+            MDLabel:
+                text: "Texte au centre de l'écran 2 - Youtube\n\nJe n'ai pas encore de vidéo !"
+                halign: "center"
+
+        MDBottomNavigationItem: # barre de navigation en bas de l'écran
+            name: "screen 3"
+            text: "What's app"
+            icon: "whatsapp"
+
+            MDLabel:
+                text: "Texte au centre de l'écran 3 - What's app"
+                halign: "center"
+
+        MDBottomNavigationItem: # barre de navigation en bas de l'écran
+            name: "screen 4"
+            text: "Flash !"
+            icon: "flash"
+
+            MDLabel:
+                text: "Texte au centre de l'écran 4 - Flash !\n\nTadadam ! Tadadam ! Tadadam ! "
+                halign: "center"
