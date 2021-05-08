@@ -2,7 +2,11 @@
 Kivy - Codemy.com #045 : Create A Bottom Bar Button with KivyMD - Python Kivy GUI Tutorial #45
 Lien : https://www.youtube.com/watch?v=TjloR7XLTF4
 
+Dans ce programme on apprend à créer une barre de menu située en haut de l'écran principal,
+ainsi qu'une barre de menu située elle, en bas de l'écran principal, ainsi que l'insertion
+d'un bouton en bas de cette barre de menu
 
+Lien sur KivyMd concernant ce widget : https://kivymd.readthedocs.io/en/latest/components/toolbar/
 
 Éditeur : Laurent REYNAUD
 Date : 30-04-2021
