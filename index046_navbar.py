@@ -4,7 +4,8 @@ Lien : https://www.youtube.com/watch?v=YynbD-netKg
 
 Dans ce programme on apprend à crééer une barre de navigation située en bas de l'écran qui permet d'accéder
 à plusieurs écrans comme si on avait des onglets
-Lien sur KivyMd concernant ce widget : https://kivymd.readthedocs.io/en/latest/components/bottom-navigation/
+Lien sur KivyMd concernant ce widget (MDBottomNavigation et MDBottomNavigationItem) :
+https://kivymd.readthedocs.io/en/latest/components/bottom-navigation/
 
 Éditeur : Laurent REYNAUD
 Date : 08-05-21
