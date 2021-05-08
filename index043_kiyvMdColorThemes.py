@@ -9,7 +9,10 @@
 # 'Red', 'Pink', 'Purple', 'DeepPurple' (violet foncé), 'Indigo', 'Blue', 'LightBlue', 'Cyan', 'Teal' (bleu / vert),
 # 'Green', 'LightGreen','Lime' (or), 'Yellow', 'Amber', 'Orange', 'DeepOrange', 'Brown', 'Gray', 'BlueGray'
 
-#  Lien sur le site KivyMd pour les couleurs : https://kivymd.readthedocs.io/en/latest/themes/theming/
+# Lien sur le site KivyMd pour les couleurs : https://kivymd.readthedocs.io/en/latest/themes/theming/
+
+# Lien sur le site KivyMd concernant les boutons rectangulaires (MDRaisedButton) :
+# https://kivymd.readthedocs.io/en/latest/components/button/#mdraisedbutton
 
 # Éditeur : Laurent REYNAUD
 # Date : 19-03-21
