@@ -5,6 +5,15 @@ Lien : https://www.youtube.com/watch?v=G-Rp41BzGxg
 Dans ce programme on apprend à créer une fenêtre où s'affiche le nom d'utilisateur avec le mot de passe à saisir
 et deux boutons : connection et effacer
 
+Lien sur KivyMd concernant le titre principal (MDLabel) : 
+https://kivymd.readthedocs.io/en/latest/components/label/
+
+Lien sur KivyMd concernant les champs de saisies avec des icônes (MDTextFieldRound) : 
+https://kivymd.readthedocs.io/en/latest/components/text-field/
+
+Lien sur KivyMd concernant les boutons arrondis (MDRoundFlatButton) :
+https://kivymd.readthedocs.io/en/latest/components/button/#mdroundflatbutton
+
 Éditeur : Laurent REYNAUD
 Date : 26-03-21
 """
