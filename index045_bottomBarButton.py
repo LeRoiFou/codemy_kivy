@@ -6,7 +6,8 @@ Dans ce programme on apprend à créer une barre de menu située en haut de l'é
 ainsi qu'une barre de menu située elle, en bas de l'écran principal, ainsi que l'insertion
 d'un bouton en bas de cette barre de menu
 
-Lien sur KivyMd concernant ce widget : https://kivymd.readthedocs.io/en/latest/components/toolbar/
+Lien sur KivyMd concernant ce widget (MDBottomAppBar et MDToolbar) :
+https://kivymd.readthedocs.io/en/latest/components/toolbar/
 
 Éditeur : Laurent REYNAUD
 Date : 30-04-2021
