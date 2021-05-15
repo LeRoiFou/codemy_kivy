@@ -1,0 +1,22 @@
+MDBoxLayout:
+	orientation: 'vertical'
+
+	MDScreen:
+
+		MDLabel:
+			id: my_label
+			text: "Texte au centre de l'écran"
+			halign: "center"
+
+		MDFloatingActionButtonSpeedDial:
+			data: app.data # icônes à afficher
+			root_button_anim: True # une croix s'affiche lorsqu'on ferme l'affichage des icônes
+			# label_text_color: 0, 1, 0, 1 # couleur du texte
+			# bg_color_stack_button: 1, 0, 0, 1 # couleur de fond des icônes
+			# color_icon_stack_button : 1, 0, 0, 1 # couleur du texte des icônes
+			# bg_color_root_button : 1, 0, 0, 1 # couleur de fond du bouton d'action
+			# color_icon_root_button : 1, 0, 0, 1 # couleur du texte du bouton d'action
+			# bg_hint_color: 1, 0, 0, 1 # couleur de lancement des icônes
+			callback: app.callback # exécution d'une action lorsqu'on appuye sur un des icônes
+			on_open: app.open() # exécution d'une action lorsqu'on appuye sur le bouton
+			on_close: app.close() # exécution d'une action lorsqu'on appuye sur le bouton
