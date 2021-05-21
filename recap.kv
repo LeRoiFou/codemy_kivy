@@ -1,0 +1,92 @@
+Screen:
+
+	MDCard:
+		# affichage d'une fenêtre
+		# https://kivymd.readthedocs.io/en/latest/components/card/#mdcard
+
+		size_hint: None, None
+
+		# orientation des widgets intérieurs
+		orientation: 'vertical'
+		
+		# largeur, hauteur
+		size: "280dp", "480dp"
+		
+		# position x, y
+		pos_hint: {"center_x": .5, "center_y": .5}
+
+		MDLabel:
+			# affichage d'un texte
+			# https://kivymd.readthedocs.io/en/latest/components/label/
+
+			# texte à afficher
+            text: "Texte 1"
+           
+            # alignement du texte : left / right / center
+            halign: "center"
+            
+            # couleur du texte : 16 couleurs / RGB / hexadecimal
+            color:	"#056293"
+
+            # position du texte par rapport au texte après
+            size_hint_y: None
+            # le texte n° 2 prend le dessus du texte n° 1
+		    height: self.texture_size[1]
+
+        MDSeparator:
+        	# ligne de séparation entre widgets
+            
+            # épaisseur de la ligne de séparation
+            height: "10dp"
+
+        MDLabel:
+
+        	# texte à afficher
+            text: "Texte 2"
+
+            # couleurs automatiques avec theme_text_color :
+            # Primary -> blanc clair
+            # Secondary -> blanc foncé
+            # Error -> rouge
+            # ContrastParentBackground -> couleur de fond inversé de la fenêtre principale
+            theme_text_color: "ContrastParentBackground"
+
+		MDSlider:
+			# barre de défilement
+			# https://kivymd.readthedocs.io/en/latest/components/slider/
+
+			# valeur minimum
+			min: 0
+
+			# valeur maximum
+		    max: 100
+
+		    # valeur par défaut
+		    value: 10
+
+		    # couleur de la barre de défilement
+		    # theme_cls.primary_light : couleur par défaut en version claire
+		    # theme_cls.primary : couleur par défaut
+		    # theme_cls.primary_dark : couleur par défaut en version foncée
+		    color: app.theme_cls.primary_color
+
+		MDRectangleFlatButton:
+			# bouton rectangulaire
+			# https://kivymd.readthedocs.io/en/latest/components/button/#mdrectangleflatbutton
+
+			# texte à afficher
+			text: 'Bouton rectangulaire classique'
+
+			# position du bouton
+			pos_hint: {'center_x': 0.5}
+			
+
+		MDRaisedButton:
+			# bouton rectangulaire avec couleur de fond
+			# https://kivymd.readthedocs.io/en/latest/components/button/#mdraisedbutton
+			
+			# texte à afficher
+			text: 'Bouton rectangulaire avec couleur de fond'
+
+			# couleur de fond du bouton
+			md_bg_color: 0, 0.25, 0.9, 1			
