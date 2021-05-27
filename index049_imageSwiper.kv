@@ -1,0 +1,56 @@
+<MySwiper@MDSwiperItem>
+
+	
+MDScreen:
+
+	MDToolbar:
+		# widget barre de menu
+		
+		# repère de la barre de menu pour les photos
+		id: toolbar
+		title : "Notre application de balayage"
+		# je ne vois pas l'intérêt de l'instruction ci-après...
+		# elevation: 10
+		pos_hint: {'top': 1}
+
+
+	MDSwiper:
+		# widget pour les photos à afficher en "balayage"
+		
+		# Les 3 instructions ci-après évitent l'affichage plein écran des photos
+		size_hint_y: None
+		# séparation entre les photos et le bas de l'écran principal
+		height: root.height - toolbar.height - dp(40)
+		# séparation entre les photos et le haut de l'écran principal
+		y: root.height - self.height - toolbar.height - dp(20)
+
+		# chargement des photos
+		MySwiper:
+			FitImage:
+				source: "pic/pic1.png"
+				# arrondi des coins des photos
+				radius: [200,]
+
+		MySwiper:
+			FitImage:
+				source: "pic/pic2.png"
+				# arrondi des coins des photos
+				radius: [1,]
+
+		MySwiper:
+			FitImage:
+				source: "pic/pic3.png"
+				# arrondi des coins des photos
+				radius: [50,]
+
+		MySwiper:
+			FitImage:
+				source: "pic/pic4.png"
+				# arrondi des coins des photos
+				radius: [20,]
+
+		MySwiper:
+			FitImage:
+				source: "pic/pic5.png"
+				# arrondi des coins des photos
+				radius: [20,]
