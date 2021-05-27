@@ -1,48 +1,58 @@
 Screen:
 
 	MDCard:
-		# affichage d'une fenêtre
+		# affichage d'un cadre
 		# https://kivymd.readthedocs.io/en/latest/components/card/#mdcard
 
-		size_hint: None, None
+		# le cadre n'est pas automotiquement élargi par rapport à la fenêtre principale
+		# size_hint: None, None
 
 		# orientation des widgets intérieurs
 		orientation: 'vertical'
 		
 		# largeur, hauteur
-		size: "280dp", "480dp"
+		# size: "600dp", "480dp"
+
+		# espacement entre le bord de l'écran principal et les widgets
+		padding: 25
+
+		# espacement entre les widgets
+		spacing: 25
 		
-		# position x, y
+		# position x, y du cadre par rapport à la fenêtre principale
 		pos_hint: {"center_x": .5, "center_y": .5}
 
+		MDToolbar:
+			# barre d'outils
+			# https://kivymd.readthedocs.io/en/latest/components/toolbar/
+
+			# titre de la barre d'outils
+			title: "Barre d'outils en haut de la fenêtre principale"
+
+			# icône du menu affiché à gauche
+			left_action_items: [["menu"]]
+
+			# autre icône du menu affiché à droite
+			right_action_items: [["dots-vertical"]]
+
+			# couleur de fond de la barre d'outils
+			md_bg_color: .2, .2, .2, 1
+
+			# couleur du texteS
+        	specific_text_color: 0.12, 0.45, 0.65, 1
+		
 		MDLabel:
 			# affichage d'un texte
 			# https://kivymd.readthedocs.io/en/latest/components/label/
 
 			# texte à afficher
-            text: "Texte 1"
+            text: "Texte"
            
             # alignement du texte : left / right / center
             halign: "center"
             
             # couleur du texte : 16 couleurs / RGB / hexadecimal
-            color:	"#056293"
-
-            # position du texte par rapport au texte après
-            size_hint_y: None
-            # le texte n° 2 prend le dessus du texte n° 1
-		    height: self.texture_size[1]
-
-        MDSeparator:
-        	# ligne de séparation entre widgets
-            
-            # épaisseur de la ligne de séparation
-            height: "10dp"
-
-        MDLabel:
-
-        	# texte à afficher
-            text: "Texte 2"
+            # color:	"#056293"
 
             # couleurs automatiques avec theme_text_color :
             # Primary -> blanc clair
@@ -50,6 +60,43 @@ Screen:
             # Error -> rouge
             # ContrastParentBackground -> couleur de fond inversé de la fenêtre principale
             theme_text_color: "ContrastParentBackground"
+
+            # taille du texte
+            font_size: 40
+
+            # espacement du widget par rapport aux autres widgets
+            padding_y: 15
+
+        MDSeparator:
+        	# ligne de séparation entre widgets
+            
+            # épaisseur de la ligne de séparation
+            height: "10dp"
+
+        MDTextFieldRound:
+        	# champs de saisies avec des icônes
+        	# https://kivymd.readthedocs.io/en/latest/components/text-field/
+
+        	# texte affiché automatiquement
+			hint_text: "Vous pouvez saisir ici"
+
+			# icône rattaché au champ de saisie
+			icon_right: "comment"
+
+			# la largeur du widget n'est pas à la largeur de la fenêtre principale
+			size_hint_x: None
+
+			# largeur du widget
+			width: 300
+
+			# taille de la police d'écriture
+			font_size: 18
+
+			# positionnement du widget par rapport à la fenêtre principale
+			pos_hint: {"center_x": 0.5}
+
+			# les caractères saisies sont remplacées par le '*'
+			password: True
 
 		MDSlider:
 			# barre de défilement
@@ -77,10 +124,12 @@ Screen:
 			# texte à afficher
 			text: 'Bouton rectangulaire classique'
 
-			# position du bouton
+			# taille du texte
+			font_size: 16
+
+			# position du bouton par rapport à la fenêtre principale
 			pos_hint: {'center_x': 0.5}
 			
-
 		MDRaisedButton:
 			# bouton rectangulaire avec couleur de fond
 			# https://kivymd.readthedocs.io/en/latest/components/button/#mdraisedbutton
@@ -88,5 +137,112 @@ Screen:
 			# texte à afficher
 			text: 'Bouton rectangulaire avec couleur de fond'
 
+			# taille du texte
+			font_size: 14
+
 			# couleur de fond du bouton
-			md_bg_color: 0, 0.25, 0.9, 1			
+			md_bg_color: 0, 0.25, 0.9, 1
+
+			# position du bouton par rapport à la fenêtre principale
+			pos_hint: {'center_x': 0.5}
+
+		MDRoundFlatButton:
+			# bouton arrondi
+			# https://kivymd.readthedocs.io/en/latest/components/button/#mdroundflatbutton
+			
+			# texte à afficher
+			text: "Bouton arrondi"
+
+			# taille du texte
+			font_size: 12
+
+			# position du bouton par rapport à la fenêtre principale
+			pos_hint: {"center_x": 0.5}
+
+		MDFloatingActionButtonSpeedDial:
+			# bouton menu déroulant des icônes
+			# https://kivymd.readthedocs.io/en/latest/components/button/#mdfloatingactionbuttonspeeddial
+
+			# icônes à afficher dont la liste est dans le fichier .py
+			data: app.data 
+
+			# une croix s'affiche lorsqu'on ferme l'affichage des icônes
+			root_button_anim: True 
+
+			# couleur du texte
+			label_text_color: 0, 1, 0, 1 
+
+			# couleur de fond des icônes
+			bg_color_stack_button: 1, 0, 0, 0.1 
+
+			# couleur du texte des icônes
+			color_icon_stack_button : 0, 0, 1, 1 
+
+			# couleur de fond du bouton d'action
+			bg_color_root_button : 0, 0, 1, 0.5 
+
+			# couleur du texte du bouton d'action
+			color_icon_root_button : 1, 0, 0, 1 
+
+			# couleur de lancement des icônes
+			bg_hint_color: 1, 0, 0, 1 
+
+		# MDSwipper:
+			# balayage des photos
+			# voir cours index049_imageSwiper
+
+		# MDBottomAppBar:
+		# 	# pour la barre d'outil en bas de la fenêtre principale
+		
+		# 	MDToolbar:
+		# 		# barre d'outils
+		# 		# https://kivymd.readthedocs.io/en/latest/components/toolbar/
+				
+		# 		# titre de la barre d'outils
+		# 		title : "Barre d'outil en bas de la fenêtre principale"
+
+		# 		# icône sous la forme d'un bouton
+		# 		icon: 'wifi'
+				
+		# 		# bouton "accroché" à la barre d'outil
+		# 		type: "bottom"
+
+		# 		# bouton positionné au bout de la barre d'outil à droite
+		# 		mode: "end"
+
+		# MDBottomNavigation:
+		# 	# barre de navigation en bas de l'écran
+	 #        # https://kivymd.readthedocs.io/en/latest/components/bottom-navigation/
+	        
+	 #        # couleur de la barre de navigation
+	 #        panel_color: 0, 0.2, 0.9, 1
+
+	 #        # 1er icône
+	 #        MDBottomNavigationItem:
+	        	
+	 #        	# nom de l'icône figurant dans la barre de navigation
+	 #            name: "barre de navigation"
+
+	 #            # texte & format affecté à cet icône
+	 #            text: "GPS"
+	 #            icon: "google-earth"
+
+	 #        # 2ème icône
+	 #        MDBottomNavigationItem:
+	        	
+	 #        	# nom de l'icône figurant dans la barre de navigation
+	 #            name: "barre de navigation"
+
+	 #            # texte & format affecté à cet icône
+	 #            text: "Musique"
+	 #            icon: "youtube"
+
+	 #        # 3ème icône
+	 #        MDBottomNavigationItem:
+	        	
+	 #        	# nom de l'icône figurant dans la barre de navigation
+	 #            name: "barre de navigation"
+
+	 #            # texte & format affecté à cet icône
+	 #            text: "Muet"
+	 #            icon: "volume-off"
