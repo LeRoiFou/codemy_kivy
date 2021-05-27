@@ -3,8 +3,6 @@ Récapitulatif
 
 Widgets et les différents instructions pour Kivy
 
-Voir à partir index044_loginScreen
-
 Éditeur : Laurent REYNAUD
 Date : 21-05-2021
 """
@@ -17,6 +15,15 @@ from kivymd.app import MDApp
 class MainApp(MDApp):  
 	"""classe permettant de construire les widgets : 
 	MDApp en argument car on a recours à la bibliothèque KivyMD"""
+
+	# dictionnaire des icônes à afficher
+	# concerne MDFloatingActionButtonSpeedDial
+	data = { 
+	'wikipedia': 'Mon dico', 
+	'google-maps': 'GPS',
+	'youtube': 'Musiques',
+	'volume-off': 'Muet',
+    }
 
 	def build(self):
 
